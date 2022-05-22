@@ -7,17 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!-- dvsdvdsvsdv -->
-<body>
-    <p>Jumlah Kolom: </p>
 
-    <select name="jumlah_kolom">
-        <?php
-            for ($i=3; $i<7; $i++) { 
-                echo("<option value='$i'=> $i Kolom </option>");
-            }
-        ?>
-    </select>
+<body>
+    <div class="container">
+        <form action="display.php" method="POST">
+            <div class="right-col" style="float: left">
+                Jumlah Kolom:
+            </div>
+            <div class="left-col" style="padding-left: 120px;">
+                <select name="jumlah_kolom">
+                    <option value="">-- Pilih Jumlah Kolom --</option>
+                    <?php
+                    for ($i = 3; $i <= 6; $i++) {
+                        echo ("<option style='color: red;' value='$i'=> $i Kolom </option>");
+                    }
+                    ?>
+                </select>
+                <br>
+                <input style="margin-top: 20px;" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
