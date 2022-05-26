@@ -11,31 +11,38 @@
         @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300&family=Poppins:wght@500;600;700&display=swap');
 
         body {
-            background: url("assets/index_backgorund.png") no-repeat center center;
+            /* background: url("assets/cover.png") no-repeat center center; */
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-            background-size: cover;
+            background-size: 500px;
             min-height: 1200px;
             overflow-y: hidden;
             color: #FFFFFF;
             min-height: 1200px;
-            margin: 0;
+            float:auto;
+            left:100px;
             font-family: 'Poppins', sans-serif;
+            
         }
 
         .container {
-            background: rgba(2, 26, 74, 0.5);
+            width: 500px;
+            height:500px;
+            /* background: rgba(2, 26, 74, 0.5);
             overflow: hidden;
             height: 100%;
             min-height: 1200px;
-            position: relative;
-        }
+            position: relative; */
+        } 
 
         img {
             position: absolute;
-            top: 5%;
-            left: 5%;
+            top: 50px;
+            left: 225px;
+            width: 1100px;
+            height:500px;
+
         }
 
         form {
@@ -47,8 +54,17 @@
         p {
             font-family: 'Poppins', sans-serif;
             font-size: 32px;
+            color: #021A4A;
         }
-
+        .rectangle{
+            background: white ; 
+            padding: 15px 10px ;
+            width:700px;
+            height: 50px;
+            margin:280px -270px; 
+            border-radius:8px;
+            box-shadow: 3px 9px 28px 1px rgba(0, 0, 0, 0.15);
+        }
         .myselect {
             text-align-last: center;
             padding: 10px 25px;
@@ -107,9 +123,10 @@
 
 <body>
     <div class="container">
-        <img src="assets/logo.png" alt="">
+        <img src="assets/cover.png" alt="">
         <form action="display.php" method="POST">
             <div class="content">
+            <div class="rectangle">
                 <p>Custom Column</p>
                 <select name="jumlah_kolom" class="myselect">
                     <option value="">-- Pilih Jumlah Kolom --</option>
@@ -122,6 +139,7 @@
                 <br>
                 <input class="mybutton" type="submit" value="Submit">
             </div>
+                </div>
         </form>
     </div>
 </body>
