@@ -1,5 +1,9 @@
 
-
+<?php
+if (isset($_POST['arr_id'])) {
+    echo $_POST['arr_id']; 
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

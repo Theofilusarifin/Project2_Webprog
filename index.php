@@ -9,8 +9,6 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300&family=Poppins:wght@500;600;700&display=swap');
-        @import "compass/css3";
-
         body {
             background: url("assets/index_backgorund.png") no-repeat center center;
             -webkit-background-size: cover;
@@ -115,7 +113,7 @@
                 <select name="jumlah_kolom" class="myselect">
                     <option value="">-- Pilih Jumlah Kolom --</option>
                     <?php
-                    for ($i = 3; $i <= 6; $i++) {
+                    for ($i = 3; $i <= 5; $i++) {
                         echo ("<option style='color: red;' value='$i'=> $i Kolom </option>");
                     }
                     ?>
