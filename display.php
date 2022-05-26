@@ -1,5 +1,4 @@
 <?php
-session_start();
 $arrHape = array(
     array(
         "SKU" => "12345",
