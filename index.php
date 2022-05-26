@@ -52,15 +52,19 @@
         }
 
         p {
+            position: absolute;
             font-family: 'Poppins', sans-serif;
-            font-size: 32px;
+            font-size: 18px;
             color: #021A4A;
+            right: 550px;
+            bottom: 37px;
         }
         .rectangle{
+            position: absolute;
             background: white ; 
             padding: 15px 10px ;
             width:700px;
-            height: 50px;
+            height: 60px;
             margin:280px -270px; 
             border-radius:8px;
             box-shadow: 3px 9px 28px 1px rgba(0, 0, 0, 0.15);
@@ -68,12 +72,15 @@
         .myselect {
             text-align-last: center;
             padding: 10px 25px;
-            margin-left: -65px;
+            margin-left: 10px;
+            margin-top: 20px;
             width: 400px;
+            height:40px;
 
             color: #bababa;
-            border: 3px solid #bababa;
-            border-radius: 0;
+            border: 2px solid #021A4A;
+            
+            border-radius: 12px;
             background-color: white;
             background-image:
                 linear-gradient(45deg, transparent 50%, #bababa 50%),
@@ -89,6 +96,8 @@
                 1px 1.5em;
 
             font: inherit;
+            font-size: 14px;
+            color: #021A4A;
 
             -webkit-appearance: none;
         }
@@ -102,16 +111,18 @@
         }
 
         .mybutton {
-            background: linear-gradient(180deg, #3E064B 0%, #5B1E7B 40.94%, #9D53E7 100%);
-            border: 1px solid #FFFFFF;
+            position: absolute;
+            background: #021A4A;
             border-radius: 61px;
-            width: 265px;
-            height: 50px;
-            margin-top: 40px;
+            width: 150px;
+            height: 40px;
+            margin: -40px 540px;
+            /* margin-top: -40px;
+            margin-left: 540px; */
             ;
             font-family: 'Poppins', sans-serif;
-            font-weight: bold;
-            font-size: 18px;
+            font-weight: normal;
+            font-size: 16px;
             color: white;
         }
 
