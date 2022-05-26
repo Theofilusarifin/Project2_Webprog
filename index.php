@@ -140,7 +140,7 @@
                 <select name="jumlah_kolom" class="myselect">
                     <option value="">-- Pilih Jumlah Kolom --</option>
                     <?php
-                    for ($i = 3; $i <= 5; $i++) {
+                    for ($i =4; $i <= 6; $i++) {
                         echo ("<option style='color: red;' value='$i'=> $i Kolom </option>");
                     }
                     ?>
