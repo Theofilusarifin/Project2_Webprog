@@ -20,6 +20,7 @@ $arrHape = array(
             "A12bionic", "4G", "2942mAH", "3GB", "256GB"
         )
     ),
+    // fds
     array(
         "SKU" => "12347",
         "Merk" => "Xiaomi",
