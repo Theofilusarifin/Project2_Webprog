@@ -25,7 +25,7 @@ $arrHape = array(
         "Merk" => "Xiaomi",
         "Model" => "11T",
         "Harga" => 5999999,
-        "url_gambar" => "assets/xiaomi_11t.png",
+        "url_gambar" => "assets/xiaomii_11t.png",
         "spec" => array(
             "9 core Arm", "5G", "5000mAH", "8GB", "256GB"
         )
@@ -36,7 +36,7 @@ $arrHape = array(
         "Merk" => "Redmi",
         "Model" => "10 2022",
         "Harga" => 2100000,
-        "url_gambar" => "assets/redmi_10a.png",
+        "url_gambar" => "assets/redmii_10a.png",
         "spec" => array(
             "Hellio G88", "4G", "5000mAH", "4GB", "64GB"
         )
@@ -46,7 +46,7 @@ $arrHape = array(
         "Merk" => "Oppo",
         "Model" => "A76",
         "Harga" => 5440000,
-        "url_gambar" => "assets/oppo_a76.png",
+        "url_gambar" => "assets/oppoo_a76.png",
         "spec" => array(
             "Snapdragon", "4G", "5000mAH", "6GB", "128GB"
         )
@@ -56,7 +56,7 @@ $arrHape = array(
         "Merk" => "Samsung",
         "Model" => "Z fold 3",
         "Harga" => 24999999,
-        "url_gambar" => "assets/samsung_zfold3.png",
+        "url_gambar" => "assets/samsungg_zfold3.png",
         "spec" => array(
             "Snapdragon", "5G", "4400mAH", "12GB", "256GB"
         )
