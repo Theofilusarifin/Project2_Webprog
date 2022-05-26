@@ -87,7 +87,17 @@ $arrHape = array(
         @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300&family=Poppins:wght@500;600;700&display=swap');
 
         body {
-            background-color: #021A4A;
+            background-color: #FFFFFF;
+        }
+
+        .rectangle{
+            position:absolute;
+            background: #021A4A ; 
+            padding: 15px 10px ;
+            margin:-59px 90px 0px -110px;
+            border-radius: 0px 0px 20px 20px;
+            width:1518px;
+            height:100px;
         }
 
         .card {
@@ -106,7 +116,10 @@ $arrHape = array(
         }
 
         img {
-            border-radius: 5px 5px 0 0;
+            position: absolute;
+            width: 300px;
+            height:80px;
+            left: 50px;
         }
 
         .row {
@@ -147,8 +160,10 @@ $arrHape = array(
 <body>
     <div class="container">
         <form action=""></form>
-        <img src="assets/our_products.png">
-        <p>Nikmati pengalamanmu dengan smartphone pilihanmu!</p>
+        <div class="rectangle">
+        <img src="assets/product.png">
+        </div>
+
         <?php
         if (isset($_POST['jumlah_kolom'])) {
             $jumlah_col = $_POST['jumlah_kolom'];
@@ -175,6 +190,7 @@ $arrHape = array(
         }
         ?>
     </div>
+    
 </body>
 
 </html>
