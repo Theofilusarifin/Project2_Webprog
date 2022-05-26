@@ -9,6 +9,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300&family=Poppins:wght@500;600;700&display=swap');
+
         body {
             background: url("assets/index_backgorund.png") no-repeat center center;
             -webkit-background-size: cover;

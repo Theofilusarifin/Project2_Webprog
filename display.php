@@ -138,6 +138,7 @@ $arrHape = array(
         }
 
         .mybutton:hover {
+            -webkit-transform: scale(1.05);
             cursor: pointer;
         }
     </style>
@@ -163,7 +164,7 @@ $arrHape = array(
                             <h4><b>John Doe</b></h4>
                             <p>Architect & Engineer</p>
                         </div>
-                        <input name="arr_id" type="hidden" value="'.($i-1).'">
+                        <input name="arr_id" type="hidden" value="' . ($i - 1) . '">
                         <input class="mybutton" type="submit" value="See Details">
                     </div>
                 ';
