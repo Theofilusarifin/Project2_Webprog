@@ -5,70 +5,70 @@ $arrHape = array(
         "Merk" => "Samsung",
         "Model" => "Galaxy S21",
         "Harga" => 18000000,
-        "url_gambar" => "<img src= assets/samsung_s21.png>",
+        "url_gambar" => "assets/samsung_s21.png",
         "spec" => array(
-            "4GB", "5G", "5150mAH", "256GB"
+            "Exynos2100", "5G", "4500mAH", "8GB", "256GB"
         )
     ),
     array(
-        "SKU" => "54321",
+        "SKU" => "12346",
+        "Merk" => "Iphone",
+        "Model" => "XR",
+        "Harga" => 7499000,
+        "url_gambar" => "assets/iphone_xr.png",
+        "spec" => array(
+            "A12bionic", "4G", "2942mAH", "3GB", "256GB"
+        )
+    ),
+    array(
+        "SKU" => "12347",
         "Merk" => "Xiaomi",
-        "Model" => "Mi 11 Pro",
-        "Harga" => 9500000,
-        "url_gambar" => "....",
+        "Model" => "11T",
+        "Harga" => 5999999,
+        "url_gambar" => "assets/xiaomi_11t.png",
         "spec" => array(
-            "8GB", "5G", "5050mAH", "256GB"
-        )
-    ),
-    array(
-        "SKU" => "AB012",
-        "Merk" => "Redmi",
-        "Model" => "Redmi Note 12",
-        "Harga" => 6500000,
-        "url_gambar" => "....",
-        "spec" => array(
-            "6GB", "5G", "5350mAH", "256GB"
+            "9 core Arm", "5G", "5000mAH", "8GB", "256GB"
         )
     ),
 
     array(
-        "SKU" => "12345",
+        "SKU" => "12348",
+        "Merk" => "Redmi",
+        "Model" => "10 2022",
+        "Harga" => 2100000,
+        "url_gambar" => "assets/redmi_10a.png",
+        "spec" => array(
+            "Hellio G88", "4G", "5000mAH", "4GB", "64GB"
+        )
+    ),
+    array(
+        "SKU" => "12349",
+        "Merk" => "Oppo",
+        "Model" => "A76",
+        "Harga" => 5440000,
+        "url_gambar" => "assets/oppo_a76.png",
+        "spec" => array(
+            "Snapdragon", "4G", "5000mAH", "6GB", "128GB"
+        )
+    ),
+    array(
+        "SKU" => "12350",
         "Merk" => "Samsung",
-        "Model" => "Galaxy S22",
-        "Harga" => 18000000,
-        "url_gambar" => "....",
+        "Model" => "Z fold 3",
+        "Harga" => 24999999,
+        "url_gambar" => "assets/samsung_zfold3.png",
         "spec" => array(
-            "4GB", "5G", "5150mAH", "256GB"
+            "Snapdragon", "5G", "4400mAH", "12GB", "256GB"
         )
     ),
     array(
-        "SKU" => "54321",
-        "Merk" => "Xiaomi",
-        "Model" => "Mi 11 Pro",
-        "Harga" => 9500000,
-        "url_gambar" => "....",
+        "SKU" => "12351",
+        "Merk" => "Samsung",
+        "Model" => "A32",
+        "Harga" => 3499000,
+        "url_gambar" => "assets/samsung_a32.png",
         "spec" => array(
-            "8GB", "5G", "5050mAH", "256GB"
-        )
-    ),
-    array(
-        "SKU" => "AB012",
-        "Merk" => "Redmi",
-        "Model" => "Redmi Note 12",
-        "Harga" => 6500000,
-        "url_gambar" => "....",
-        "spec" => array(
-            "6GB", "5G", "5350mAH", "256GB"
-        )
-    ),
-    array(
-        "SKU" => "AB012",
-        "Merk" => "Redmi",
-        "Model" => "Redmi Note 12",
-        "Harga" => 6500000,
-        "url_gambar" => "....",
-        "spec" => array(
-            "6GB", "5G", "5350mAH", "256GB"
+            "Mediatel Hellio", "4G", "5000mAH", "6GB", "126GB"
         )
     ),
 )
@@ -91,24 +91,22 @@ $arrHape = array(
         }
 
         .rectangle{
-            position:absolute;
             background: #021A4A ; 
-            padding: 15px 10px ;
-            margin:-59px 90px 0px -110px;
+            padding:0 ;
+            /* margin:-59px 90px 0px -110px; */
+            margin:-10px -20px -10px -10px;
             border-radius: 0px 0px 20px 20px;
-            width:1518px;
+            width:100%;
             height:100px;
         }
 
         .card {
-
+            width:200px;
             filter: drop-shadow(0px 0px 11px rgba(0, 0, 0, 0.25));
             transition: 0.3s;
             border-radius: 5px;
             background-color: #fff;
-            width: 307px;
-            height: 416px;
-
+            height: 300px;
         }
 
         .card:hover {
@@ -116,22 +114,23 @@ $arrHape = array(
         }
 
         .container {
-            padding: 50px 100px;
+            padding: 0px 0px;
         }
 
         img {
-            position: absolute;
             width: 300px;
             height:80px;
             left: 50px;
         }
 
         .row {
-            display: flex;
+            display: grid;
+            grid-template-columns: <?php for($i=1; $i<=$_POST['jumlah_kolom']; $i++) echo 'auto '; ?>;
             /* justify-content:space-between; */
             gap: 2em;
             margin-bottom: 2em;
-            margin-top: 6em;
+            margin-top: 2em;
+            padding: 5px 20px;
         }
 
         p {
@@ -142,17 +141,22 @@ $arrHape = array(
         }
 
         .mybutton {
-            position: absolute;
+            position: fixed;
+            bottom:15px;
+            left: 15px;
             background: #021A4A;
             border-radius: 61px;
             width: 130px;
             height: 40px;
-            margin: 100px 20px;
-            ;
-            font-family: 'Poppins', sans-serif;
+            margin: 100px 10px;
+            padding:0; margin:0;
             font-weight: normal;
             font-size: 18px;
             color: white;
+        }
+        p,h1,h2,h3,h4,h5,h6,label,.mybutton{
+        
+            font-family: 'Poppins', sans-serif;
         }
 
         .mybutton:hover {
@@ -163,34 +167,35 @@ $arrHape = array(
 </head>
 
 <body>
-    <div class="container">
-        <form action=""></form>
+    <div class="container" style="width:100%;">
         <div class="rectangle">
-        <img src="assets/product.png">
+            <img style="padding-left:50px;"src="assets/product.png">
         </div>
-
         <?php
         if (isset($_POST['jumlah_kolom'])) {
             $jumlah_col = $_POST['jumlah_kolom'];
             if ($jumlah_col != "") {
-                for ($i = 1; $i <= count($arrHape); $i++) {
+                
+                echo '<div class="row">';
+                foreach($arrHape as $arr){
                     echo '<form action="detail.php" method="POST">';
-                    if (($i - 1) % $jumlah_col == 0) echo '<div class="row">';
+                    // if (($i - 1) % $jumlah_col == 0) echo '<div class="row">';
                     // Card Disini
                     echo '
                     <div class="card">
-                        <img src="img_avatar.png" alt="Avatar" style="width:100%">
-                        <div class="container">
-                            <h4><b>John Doe</b></h4>
-                            <p>Architect & Engineer</p>
+                        <img src="'.$arr['url_gambar'].'" alt="Avatar" style="object-fit:fill; width:100% !important; height:150px;"><br>
+                        <div class="container" style="padding-left:20px;">
+                            <h4><b>'.$arr['Merk'].' '.$arr['Model'].'</b></h4>
+                            <h4 style="color:red;"><b>Rp. '.$arr['Harga'].'</b></h4>
                         </div>
                         <input name="arr_id" type="hidden" value="' . ($i - 1) . '">
                         <input class="mybutton" type="submit" value="See Details">
                     </div>
                 ';
-                    if ($i % $jumlah_col == 0) echo '</div>';
                     echo '</form>';
                 }
+                
+                echo '</div>';
             }
         }
         ?>
