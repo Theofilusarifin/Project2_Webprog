@@ -117,8 +117,6 @@
             width: 150px;
             height: 40px;
             margin: -40px 540px;
-            /* margin-top: -40px;
-            margin-left: 540px; */
             ;
             font-family: 'Poppins', sans-serif;
             font-weight: normal;
