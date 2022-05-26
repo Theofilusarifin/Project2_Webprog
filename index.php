@@ -146,7 +146,7 @@
                     ?>
                 </select>
                 <br>
-                <input class="mybutton" type="submit" value="Submit">
+                <input class="mybutton" type="submit" value="Search">
             </div>
                 </div>
         </form>
