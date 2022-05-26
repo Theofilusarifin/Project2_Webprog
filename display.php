@@ -3,9 +3,9 @@ $arrHape = array(
     array(
         "SKU" => "12345",
         "Merk" => "Samsung",
-        "Model" => "Galaxy S22",
+        "Model" => "Galaxy S21",
         "Harga" => 18000000,
-        "url_gambar" => "....",
+        "url_gambar" => "<img src= assets/samsung_s21.png>",
         "spec" => array(
             "4GB", "5G", "5150mAH", "256GB"
         )
