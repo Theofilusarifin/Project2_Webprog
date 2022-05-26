@@ -66,7 +66,7 @@ $arrHape = array(
         "Merk" => "Samsung",
         "Model" => "A32",
         "Harga" => 3499000,
-        "url_gambar" => "assets/samsung_a32.png",
+        "url_gambar" => "assets/samsungg_a32.png",
         "spec" => array(
             "Mediatel Hellio", "4G", "5000mAH", "6GB", "126GB"
         )
