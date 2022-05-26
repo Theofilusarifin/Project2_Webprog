@@ -101,10 +101,14 @@ $arrHape = array(
         }
 
         .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+            filter: drop-shadow(0px 0px 11px rgba(0, 0, 0, 0.25));
             transition: 0.3s;
             border-radius: 5px;
             background-color: #fff;
+            width: 307px;
+            height: 416px;
+
         }
 
         .card:hover {
@@ -127,6 +131,7 @@ $arrHape = array(
             /* justify-content:space-between; */
             gap: 2em;
             margin-bottom: 2em;
+            margin-top: 6em;
         }
 
         p {
@@ -137,15 +142,15 @@ $arrHape = array(
         }
 
         .mybutton {
-            background: linear-gradient(180deg, #3E064B 0%, #5B1E7B 40.94%, #9D53E7 100%);
-            border: 1px solid #FFFFFF;
+            position: absolute;
+            background: #021A4A;
             border-radius: 61px;
-            width: 150px;
-            height: 50px;
-            margin-top: 40px;
+            width: 130px;
+            height: 40px;
+            margin: 100px 20px;
             ;
             font-family: 'Poppins', sans-serif;
-            font-weight: bold;
+            font-weight: normal;
             font-size: 18px;
             color: white;
         }
