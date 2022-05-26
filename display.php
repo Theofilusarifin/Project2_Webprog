@@ -15,7 +15,7 @@ $arrHape = array(
         "Merk" => "Iphone",
         "Model" => "XR",
         "Harga" => 7499000,
-        "url_gambar" => "assets/iphone_xr.png",
+        "url_gambar" => "assets/iphonee_xr.png",
         "spec" => array(
             "A12bionic", "4G", "2942mAH", "3GB", "256GB"
         )
@@ -66,7 +66,7 @@ $arrHape = array(
         "Merk" => "Samsung",
         "Model" => "A32",
         "Harga" => 3499000,
-        "url_gambar" => "assets/samsungg_a32.png",
+        "url_gambar" => "assets/samsunggalaxy_a32.png",
         "spec" => array(
             "Mediatel Hellio", "4G", "5000mAH", "6GB", "126GB"
         )
