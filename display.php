@@ -157,6 +157,7 @@ $arrHape = array(
         p,h1,h2,h3,h4,h5,h6,label,.mybutton{
         
             font-family: 'Poppins', sans-serif;
+            font-weight: normal;
         }
 
         .mybutton:hover {
@@ -185,8 +186,8 @@ $arrHape = array(
                     <div class="card">
                         <img src="'.$arr['url_gambar'].'" alt="Avatar" style="object-fit:fill; width:100% !important; height:150px;"><br>
                         <div class="container" style="padding-left:20px;">
-                            <h4><b>'.$arr['Merk'].' '.$arr['Model'].'</b></h4>
-                            <h4 style="color:red;"><b>Rp. '.$arr['Harga'].'</b></h4>
+                            <h4>'.$arr['Merk'].' '.$arr['Model'].'</h4>
+                            <h4 style="color:red; margin-top: -20px;">Rp. '.$arr['Harga'].'</h4>
                         </div>
                         <input name="arr_id" type="hidden" value="' . ($i - 1) . '">
                         <input class="mybutton" type="submit" value="See Details">
