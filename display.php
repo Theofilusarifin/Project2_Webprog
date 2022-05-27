@@ -95,10 +95,11 @@ $arrHape = array(
             background: #021A4A ; 
             padding:0 ;
             /* margin:-59px 90px 0px -110px; */
-            margin:-10px -20px -10px -10px;
+            margin:-10px -20px 30px -10px;
             border-radius: 0px 0px 20px 20px;
             width:100%;
-            height:100px;
+            padding: 30px 10px;
+            height:110px;
         }
 
         .card {
@@ -119,8 +120,8 @@ $arrHape = array(
         }
 
         img {
-            width: 300px;
-            height:80px;
+            width: 450px;
+            height:100px;
             left: 50px;
         }
 
