@@ -73,6 +73,8 @@ $arrHape = array(
         )
     ),
 )
+    $arrHape = $_SESSION['arrHape'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -89,30 +91,28 @@ $arrHape = array(
 
         body {
             background-color: #FFFFFF;
+            overflow: hidden;
         }
 
-        .rectangle{
-            background: #021A4A ; 
-            padding:0 ;
+        .rectangle {
+            background: #021A4A;
+            padding: 0;
             /* margin:-59px 90px 0px -110px; */
-            margin:-10px -20px 30px -10px;
+            margin: -10px -20px 30px -10px;
             border-radius: 0px 0px 20px 20px;
-            width:100%;
+            width: 100%;
             padding: 30px 10px;
-            height:110px;
+            height: 110px;
         }
 
         .card {
-            width:200px;
+            position: relative;
+            width: 200px;
             filter: drop-shadow(0px 0px 11px rgba(0, 0, 0, 0.25));
             transition: 0.3s;
             border-radius: 5px;
             background-color: #fff;
             height: 300px;
-        }
-
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         }
 
         .container {
@@ -121,13 +121,13 @@ $arrHape = array(
 
         img {
             width: 450px;
-            height:100px;
+            height: 100px;
             left: 50px;
         }
 
         .row {
             display: grid;
-            grid-template-columns: <?php for($i=1; $i<=$_POST['jumlah_kolom']; $i++) echo 'auto '; ?>;
+            grid-template-columns: <?php for ($i = 1; $i <= $_GET['jumlah_kolom']; $i++) echo 'auto '; ?>;
             /* justify-content:space-between; */
             gap: 2em;
             margin-bottom: 2em;
@@ -144,20 +144,30 @@ $arrHape = array(
 
         .mybutton {
             position: fixed;
-            bottom:15px;
+            bottom: 15px;
             left: 15px;
             background: #021A4A;
             border-radius: 61px;
             width: 130px;
             height: 40px;
             margin: 100px 10px;
-            padding:0; margin:0;
+            padding: 0;
+            margin: 0;
             font-weight: normal;
             font-size: 18px;
             color: white;
         }
-        p,h1,h2,h3,h4,h5,h6,label,.mybutton{
-        
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        label,
+        .mybutton {
+
             font-family: 'Poppins', sans-serif;
             font-weight: normal;
         }
@@ -166,44 +176,85 @@ $arrHape = array(
             -webkit-transform: scale(1.05);
             cursor: pointer;
         }
+
+
+        .form-add {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 20px;
+            left: 145px;
+        }
+
+        .box{
+            position: relative;
+        }
+
+        .add {
+            width: 40px;
+            height: 40px;
+            font-family: 'Poppins', sans-serif;
+            background-color: #41D18E;
+            color: white;
+            border-radius: 100%;
+            font-size: 18px;
+            border: none;
+        }
+
+        .add:hover {
+            cursor: pointer;
+            -webkit-transform: scale(1.05);
+        }
     </style>
 </head>
 
 <body>
     <div class="container" style="width:100%;">
         <div class="rectangle">
-            <img style="padding-left:50px;"src="assets/product.png">
+            <img style="padding-left:50px;" src="assets/product.png">
         </div>
         <?php
-        if (isset($_POST['jumlah_kolom'])) {
-            $jumlah_col = $_POST['jumlah_kolom'];
+        if (isset($_GET['jumlah_kolom'])) {
+            $jumlah_col = $_GET['jumlah_kolom'];
             if ($jumlah_col != "") {
-                
+
                 echo '<div class="row">';
-                foreach($arrHape as $arr){
-                    echo '<form action="detail.php" method="POST">';
+                $i = 0;
+                foreach ($arrHape as $arr) {
+                    echo('<div class="box">');
+                    echo '<form action="detail.php" method="GET">';
                     // if (($i - 1) % $jumlah_col == 0) echo '<div class="row">';
                     // Card Disini
                     echo '
                     <div class="card">
-                        <img src="'.$arr['url_gambar'].'" alt="Avatar" style="object-fit:fill; width:100% !important; height:150px;"><br>
+                        <img src="' . $arr['url_gambar'] . '" alt="Avatar" style="object-fit:fill; width:100% !important; height:150px;"><br>
                         <div class="container" style="padding-left:20px;">
-                            <h4>'.$arr['Merk'].' '.$arr['Model'].'</h4>
-                            <h4 style="color:red; margin-top: -20px;">Rp. '.$arr['Harga'].'</h4>
+                            <h4>' . $arr['Merk'] . ' ' . $arr['Model'] . '</h4>
+                            <h4 style="color:red; margin-top: -20px;">Rp. ' . $arr['Harga'] . '</h4>
                         </div>
-                        <input name="arr_id" type="hidden" value="' . ($i - 1) . '">
+                        <input name="arr_id" type="hidden" value="' . ($i) . '">
                         <input class="mybutton" type="submit" value="See Details">
                     </div>
-                ';
+                    ';
+                    $i++;
                     echo '</form>';
+
+                    echo ('
+                            <form class="form-add" action="proses.php" method="GET">
+                                <input type="hidden" name="type" value="add">
+                                <input type="hidden" name="data" value="' . ($i) . '">
+                                <input class="add" type="submit" value="+">
+                            </form>
+                    ');
+                    echo '</div>';
                 }
-                
+
                 echo '</div>';
             }
         }
         ?>
     </div>
-    
+
 </body>
 
 </html>

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,28 +24,28 @@
             overflow-y: hidden;
             color: #FFFFFF;
             min-height: 1200px;
-            float:auto;
-            left:100px;
+            float: auto;
+            left: 100px;
             font-family: 'Poppins', sans-serif;
-            
+
         }
 
         .container {
             width: 500px;
-            height:500px;
+            height: 500px;
             /* background: rgba(2, 26, 74, 0.5);
             overflow: hidden;
             height: 100%;
             min-height: 1200px;
             position: relative; */
-        } 
+        }
 
         img {
             position: absolute;
             top: 50px;
             left: 225px;
             width: 1100px;
-            height:500px;
+            height: 500px;
 
         }
 
@@ -59,27 +63,29 @@
             right: 550px;
             bottom: 37px;
         }
-        .rectangle{
+
+        .rectangle {
             position: absolute;
-            background: white ; 
-            padding: 15px 10px ;
-            width:700px;
+            background: white;
+            padding: 15px 10px;
+            width: 700px;
             height: 60px;
-            margin:280px -270px; 
-            border-radius:8px;
+            margin: 280px -270px;
+            border-radius: 8px;
             box-shadow: 3px 9px 28px 1px rgba(0, 0, 0, 0.15);
         }
+
         .myselect {
             text-align-last: center;
             padding: 10px 25px;
             margin-left: 10px;
             margin-top: 20px;
             width: 400px;
-            height:40px;
+            height: 40px;
 
             color: #bababa;
             border: 2px solid #021A4A;
-            
+
             border-radius: 12px;
             background-color: white;
             background-image:
@@ -133,24 +139,103 @@
 <body>
     <div class="container">
         <img src="assets/cover.png" alt="">
-        <form action="display.php" method="POST">
+        <form action="display.php" method="GET">
             <div class="content">
-            <div class="rectangle">
-                <p>Custom Column</p>
-                <select name="jumlah_kolom" class="myselect">
-                    <option value="">-- Pilih Jumlah Kolom --</option>
-                    <?php
-                    for ($i =4; $i <= 6; $i++) {
-                        echo ("<option style='color: red;' value='$i'=> $i Kolom </option>");
-                    }
-                    ?>
-                </select>
-                <br>
-                <input class="mybutton" type="submit" value="Search">
-            </div>
+                <div class="rectangle">
+                    <p>Custom Column</p>
+                    <select name="jumlah_kolom" class="myselect">
+                        <option value="">-- Pilih Jumlah Kolom --</option>
+                        <?php
+                        for ($i = 4; $i <= 6; $i++) {
+                            echo ("<option style='color: red;' value='$i'=> $i Kolom </option>");
+                        }
+                        ?>
+                    </select>
+                    <br>
+                    <input class="mybutton" type="submit" value="Search">
                 </div>
+            </div>
         </form>
     </div>
 </body>
 
 </html>
+
+<?php
+$arrHape = array(
+    array(
+        "SKU" => "12345",
+        "Merk" => "Samsung",
+        "Model" => "Galaxy S21",
+        "Harga" => 18000000,
+        "url_gambar" => "assets/samsung_s21.png",
+        "spec" => array(
+            "Exynos2100", "5G", "4500mAH", "8GB", "256GB"
+        )
+    ),
+    array(
+        "SKU" => "12346",
+        "Merk" => "Iphone",
+        "Model" => "XR",
+        "Harga" => 7499000,
+        "url_gambar" => "assets/iphonee_xr.png",
+        "spec" => array(
+            "A12bionic", "4G", "2942mAH", "3GB", "256GB"
+        )
+    ),
+    // fds
+    array(
+        "SKU" => "12347",
+        "Merk" => "Xiaomi",
+        "Model" => "11T",
+        "Harga" => 5999999,
+        "url_gambar" => "assets/xiaomii_11t.png",
+        "spec" => array(
+            "9 core Arm", "5G", "5000mAH", "8GB", "256GB"
+        )
+    ),
+
+    array(
+        "SKU" => "12348",
+        "Merk" => "Redmi",
+        "Model" => "10 2022",
+        "Harga" => 2100000,
+        "url_gambar" => "assets/redmii_10a.png",
+        "spec" => array(
+            "Hellio G88", "4G", "5000mAH", "4GB", "64GB"
+        )
+    ),
+    array(
+        "SKU" => "12349",
+        "Merk" => "Oppo",
+        "Model" => "A76",
+        "Harga" => 5440000,
+        "url_gambar" => "assets/oppoo_a76.png",
+        "spec" => array(
+            "Snapdragon", "4G", "5000mAH", "6GB", "128GB"
+        )
+    ),
+    array(
+        "SKU" => "12350",
+        "Merk" => "Samsung",
+        "Model" => "Z fold 3",
+        "Harga" => 24999999,
+        "url_gambar" => "assets/samsungg_zfold3.png",
+        "spec" => array(
+            "Snapdragon", "5G", "4400mAH", "12GB", "256GB"
+        )
+    ),
+    array(
+        "SKU" => "12351",
+        "Merk" => "Samsung",
+        "Model" => "A32",
+        "Harga" => 3499000,
+        "url_gambar" => "assets/samsunggalaxy_a32.png",
+        "spec" => array(
+            "Mediatel Hellio", "4G", "5000mAH", "6GB", "126GB"
+        )
+    ),
+);
+
+$_SESSION['arrHape'] = $arrHape;
+?>
