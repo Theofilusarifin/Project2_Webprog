@@ -34,13 +34,14 @@ if (isset($_SESSION['arrHape'])) {
         }
 
         .card {
-            position: relative;
+            /* position: relative; */
             width: 200px;
             filter: drop-shadow(0px 0px 11px rgba(0, 0, 0, 0.25));
             transition: 0.3s;
             border-radius: 5px;
             background-color: #fff;
             height: 300px;
+            margin-bottom:5%;
         }
 
         .container {
@@ -55,12 +56,10 @@ if (isset($_SESSION['arrHape'])) {
 
         .row {
             display: grid;
-            grid-template-columns: <?php for ($i = 1; $i <= $_GET['jumlah_kolom']; $i++) echo 'auto '; ?>;
-            /* justify-content:space-between; */
-            gap: 2em;
-            margin-bottom: 2em;
-            margin-top: 2em;
-            padding: 5px 20px;
+            grid-template-columns: <?php $width = (int)(100/$_GET['jumlah_kolom']); for ($i = 1; $i <= $_GET['jumlah_kolom']; $i++) echo($width.'% ') ?>;
+            width : 80%;
+            grid-gap: 10px;
+            padding: 0 10%;
         }
 
         p {
@@ -116,6 +115,7 @@ if (isset($_SESSION['arrHape'])) {
 
         .box{
             position: relative;
+            
         }
 
         .add {
