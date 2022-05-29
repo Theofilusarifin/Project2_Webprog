@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['arrHape'])) {
-    $arrHape = $_SESSION['arrHape'];
+    $arrHape = $_SESSION['arrHape']; // disini akses arr cart buat list cart, gabisa arr yang ini
 }
 ?>
 
@@ -54,7 +54,7 @@ if (isset($_GET['arr_id'])) {
 <div class="container" style="width:100%;">
     <img class="cart" left:50px;" src="assets/Cart.png">
     <div class="card">
-            <img src="<?php echo ($data['url_gambar']) ?>" style="object-fit:fill; width:100% !important; height:150px;">
+            <img src="<?php echo(''.$data['url_gambar']); ?>" style="object-fit:fill; width:100% !important; height:150px;">
     </div>
 
 
