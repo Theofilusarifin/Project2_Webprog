@@ -42,10 +42,10 @@ session_start();
 
         img {
             position: absolute;
-            top: 50px;
-            left: 225px;
-            width: 1100px;
-            height: 500px;
+            top: 80px;
+            left: 350px;
+            width: 1300px;
+            height: 600px;
 
         }
 
@@ -70,7 +70,7 @@ session_start();
             padding: 15px 10px;
             width: 700px;
             height: 60px;
-            margin: 280px -270px;
+            margin: 340px -200px;
             border-radius: 8px;
             box-shadow: 3px 9px 28px 1px rgba(0, 0, 0, 0.15);
         }
