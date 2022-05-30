@@ -48,14 +48,34 @@ if (isset($_GET['arr_id'])) {
             border-radius: 10px;
             background-color: #fff;
         }
+
+        .info {
+            position: fixed;
+            top: 105px;
+            left: 650px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1,
+        p {
+            color: #021A4A;
+            font-family: 'Poppins', sans-serif;
+        }
         </style>
 </head>
 <body>
 <div class="container" style="width:100%;">
     <img class="cart" left:50px;" src="assets/Cart.png">
+    
     <div class="card">
             <img src="<?php echo(''.$data['url_gambar']); ?>" style="object-fit:fill; width:100% !important; height:150px;">
     </div>
+
+    <div class="info">
+        <?php
+            echo ('<h1>' . $data['Merk'] . ' ' . $data['Model'] . '</h1>');
+        ?>
+        </div>
 
 
 </div>
