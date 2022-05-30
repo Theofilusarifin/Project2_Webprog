@@ -19,7 +19,7 @@ if (isset($_SESSION['arrHape'])) {
 
         body {
             background-color: #FFFFFF;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         .rectangle {
