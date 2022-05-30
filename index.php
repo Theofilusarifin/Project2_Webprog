@@ -146,7 +146,7 @@ session_start();
                     <select name="jumlah_kolom" class="myselect">
                         <option value="">-- Pilih Jumlah Kolom --</option>
                         <?php
-                        for ($i = 4; $i <= 6; $i++) {
+                        for ($i = 4; $i <= 7; $i++) {
                             echo ("<option style='color: red;' value='$i'=> $i Kolom </option>");
                         }
                         ?>
@@ -233,6 +233,26 @@ $arrHape = array(
         "url_gambar" => "assets/samsunggalaxy_a32.png",
         "spec" => array(
             "Mediatel Hellio", "4G", "5000mAH", "6GB", "126GB"
+        )
+    ),
+    array(
+        "SKU" => "12345",
+        "Merk" => "Samsung",
+        "Model" => "Galaxy S21",
+        "Harga" => 18000000,
+        "url_gambar" => "assets/samsung_s21.png",
+        "spec" => array(
+            "Exynos2100", "5G", "4500mAH", "8GB", "256GB"
+        )
+    ),
+    array(
+        "SKU" => "12349",
+        "Merk" => "Oppo",
+        "Model" => "A76",
+        "Harga" => 5440000,
+        "url_gambar" => "assets/oppoo_a76.png",
+        "spec" => array(
+            "Snapdragon", "4G", "5000mAH", "6GB", "128GB"
         )
     ),
 );

@@ -86,14 +86,6 @@ if (isset($_GET['arr_id'])) {
             font-size: 18px;
         }
 
-        .add {
-            position: fixed;
-            top: 200px;
-            left: 1310px;
-            height: 100px;
-            width: auto;
-        }
-
         .price {
             position: fixed;
             top: 105px;
@@ -139,13 +131,6 @@ if (isset($_GET['arr_id'])) {
         </div>
         <div class="price">
             <h1 style="color:#FF0000"><?php echo ("Rp." . $data['Harga']) ?></h1>
-        </div>
-        <div class="add">
-            <form action="proses.php" method="GET">
-                <input type="hidden" name="type" value="add">
-                <input type="hidden" name="data" value="<?php echo ($_GET['arr_id']) ?>">
-                <input type="submit" value="Add To Cart">
-            </form>
         </div>
         <img class="review" src="assets/Review.png" alt="">
     </div>

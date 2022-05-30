@@ -104,29 +104,9 @@ if (isset($_SESSION['arrHape'])) {
             cursor: pointer;
         }
 
-
-        .form-add {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            top: 20px;
-            left: 145px;
-        }
-
         .box{
             position: relative;
             
-        }
-
-        .add {
-            width: 40px;
-            height: 40px;
-            font-family: 'Poppins', sans-serif;
-            background-color: #41D18E;
-            color: white;
-            border-radius: 100%;
-            font-size: 18px;
-            border: none;
         }
 
         .add:hover {
@@ -166,14 +146,6 @@ if (isset($_SESSION['arrHape'])) {
                     ';
                     $i++;
                     echo '</form>';
-
-                    echo ('
-                            <form class="form-add" action="proses.php" method="GET">
-                                <input type="hidden" name="type" value="add">
-                                <input type="hidden" name="data" value="' . ($i) . '">
-                                <input class="add" type="submit" value="+">
-                            </form>
-                    ');
                     echo '</div>';
                 }
 
