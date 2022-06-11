@@ -88,19 +88,6 @@ session_start();
 
             border-radius: 12px;
             background-color: white;
-            background-image:
-                linear-gradient(45deg, transparent 50%, #bababa 50%),
-                linear-gradient(135deg, #bababa 50%, transparent 50%);
-            background-repeat: no-repeat;
-            background-position:
-                calc(100% - 20px) calc(1em + 2px),
-                calc(100% - 15px) calc(1em + 2px),
-                calc(100% - 2.5em) 0.5em;
-            background-size:
-                5px 5px,
-                5px 5px,
-                1px 1.5em;
-
             font: inherit;
             font-size: 14px;
             color: #021A4A;

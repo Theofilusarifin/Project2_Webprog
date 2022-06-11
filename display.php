@@ -131,8 +131,6 @@ if (isset($_SESSION['arrHape'])) {
                 foreach ($arrHape as $arr) {
                     echo('<div class="box">');
                     echo '<form action="detail.php" method="GET">';
-                    // if (($i - 1) % $jumlah_col == 0) echo '<div class="row">';
-                    // Card Disini
                     echo '
                     <div class="card">
                         <img src="' . $arr['url_gambar'] . '" alt="Avatar" style="object-fit:fill; width:100% !important; height:150px;"><br>
