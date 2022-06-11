@@ -242,6 +242,46 @@ $arrHape = array(
             "Snapdragon", "4G", "5000mAH", "6GB", "128GB"
         )
     ),
+    array(
+        "SKU" => "12350",
+        "Merk" => "Samsung",
+        "Model" => "Z fold 3",
+        "Harga" => 24999999,
+        "url_gambar" => "assets/samsungg_zfold3.png",
+        "spec" => array(
+            "Snapdragon", "5G", "4400mAH", "12GB", "256GB"
+        )
+    ),
+    array(
+        "SKU" => "12351",
+        "Merk" => "Samsung",
+        "Model" => "A32",
+        "Harga" => 3499000,
+        "url_gambar" => "assets/samsunggalaxy_a32.png",
+        "spec" => array(
+            "Mediatel Hellio", "4G", "5000mAH", "6GB", "126GB"
+        )
+    ),
+    array(
+        "SKU" => "12345",
+        "Merk" => "Samsung",
+        "Model" => "Galaxy S21",
+        "Harga" => 18000000,
+        "url_gambar" => "assets/samsung_s21.png",
+        "spec" => array(
+            "Exynos2100", "5G", "4500mAH", "8GB", "256GB"
+        )
+    ),
+    array(
+        "SKU" => "12349",
+        "Merk" => "Oppo",
+        "Model" => "A76",
+        "Harga" => 5440000,
+        "url_gambar" => "assets/oppoo_a76.png",
+        "spec" => array(
+            "Snapdragon", "4G", "5000mAH", "6GB", "128GB"
+        )
+    ),
 );
 
 $_SESSION['arrHape'] = $arrHape;
